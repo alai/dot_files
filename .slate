@@ -1,0 +1,65 @@
+# This is the default .slate file.
+# If no ~/.slate file exists this is the file that will be used.
+
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+
+# Alias Settings
+alias 3keys shift;alt;cmd
+# alias 4keys space;alt;cmd;shift
+# alias dell 1
+# alias mac 0
+
+# Resize Bindings
+# bind right:alt       resize +10% +0
+# bind left:alt        resize -10% +0
+# bind up:alt          resize +0   -10%
+# bind down:alt        resize +0   +10%
+# # bind right:space;alt  resize -10% +0 bottom-right
+# bind left:space;alt   resize +10% +0 bottom-right
+# bind up:space;alt     resize +0   +10% bottom-right
+# bind down:space;alt   resize +0   -10% bottom-right
+
+# Push Bindings
+# bind right:space;cmd  push right bar-resize:screenSizeX/3*2
+# bind left:space;cmd   push left  bar-resize:screenSizeX/3
+# bind up:space;cmd     push up    bar-resize:screenSizeY/2
+# bind down:space;cmd   push down  bar-resize:screenSizeY/2
+bind up:${3keys}     push up    bar-resize:screenSizeX
+bind down:${3keys}   move screenOriginX+screenSizeX/8;screenOriginY+screenSizeY/6 3*screenSizeX/4;3*screenSizeY/4
+bind left:${3keys}   push left  bar-resize:screenSizeX/2
+bind right:${3keys}  push right bar-resize:screenSizeX/2
+
+# Nudge Bindings
+# bind right:shift;alt nudge +10% +0
+# bind left:shift;alt  nudge -10% +0
+# bind up:shift;alt    nudge +0   -10%
+# bind down:shift;alt  nudge +0   +10%
+
+# Throw Bindings
+# bind ;:${4keys}      throw ${dell} resize
+# bind ':${4keys}      throw ${mac}  resize
+# bind up:${4keys}     throw up
+# bind down:${4keys}   throw down
+
+# Focus Bindings
+# bind right:cmd    focus right
+# bind left:cmd     focus left
+# bind up:cmd       focus up
+# bind down:cmd     focus down
+# bind up:cmd;alt   focus behind
+# bind down:cmd;alt focus behind
+
+# Hints and Relaunch
+bind space:${3keys} hint
+bind r:${3keys}     relaunch
+
+# App Bindings
+# bind a:${3keys} focus 'Atom'
+# bind o:${3keys} focus 'Microsoft Outlook'
+# bind s:${3keys} focus 'Safari'
+# bind c:${3keys} focus 'Google Chrome'
+# bind r:${3keys} focus 'RStudio'
+# bind t:${3keys} focus 'Terminal'
+# bind p:${3keys} focus 'System Preferences'
