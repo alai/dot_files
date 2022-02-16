@@ -9,10 +9,10 @@ config resizePercentOf screenSize
 alias 3keys shift;alt;cmd
 alias dell 1
 alias mac 0
-alias ma 9 #margin can be set as zero
+alias ma 9 #margin can be set to zero
 
 alias 66R push right bar-resize:screenSizeX/3*2
-alias 33L push left  bar-resize:screenSizeX/3
+alias 33L push left bar-resize:screenSizeX/3
 alias 66Rma move screenSizeX/3+${ma}*2;screenOriginY+${ma} screenSizeX/3*2-${ma}*3;screenSizeY-${ma}*2 1
 alias 33Lma move screenOriginX+${ma};screenOriginY+${ma} screenSizeX/3;screenSizeY-${ma}*2 1
 
@@ -22,11 +22,11 @@ alias 60Rma move screenSizeX/5*2+${ma}*2;screenOriginY+${ma} screenSizeX/5*3-${m
 alias 40Lma move screenOriginX+${ma};screenOriginY+${ma} screenSizeX/5*2;screenSizeY-${ma}*2 1
 
 alias 75R push right bar-resize:screenSizeX/4*3
-alias 25L push left  bar-resize:screenSizeX/4*1
+alias 25L push left bar-resize:screenSizeX/4*1
 alias 75Rma move screenSizeX/4+${ma}*2;screenOriginY+${ma} screenSizeX/4*3-${ma}*3;screenSizeY-${ma}*2 1
 alias 25Lma move screenOriginX+${ma};screenOriginY+${ma} screenSizeX/4;screenSizeY-${ma}*2 1
 
-alias 50L push left  bar-resize:screenSizeX/2
+alias 50L push left bar-resize:screenSizeX/2
 alias 50R push right bar-resize:screenSizeX/2
 alias 50Ram move screenSizeX/2+${ma}*2;screenOriginY+${ma} screenSizeX/2-${ma}*2;screenSizeY-${ma}*2 1
 alias 50Lam move screenOriginX+${ma};screenOriginY+${ma} screenSizeX/2;screenSizeY-${ma}*2 1
@@ -40,7 +40,7 @@ alias Narrow move screenOriginX+screenSizeX/4;screenOriginY 2*screenSizeX/4;scre
 #
 # Push Bindings
 bind right:ctrl;cmd ${66Rma}
-bind left:ctrl;cmd	${33Lma}
+bind left:ctrl;cmd ${33Lma}
 bind .:ctrl;cmd ${60Rma} 
 bind ,:ctrl;cmd ${40Lma}
 bind m:ctrl;cmd ${75Rma}
@@ -51,17 +51,17 @@ bind k:ctrl;cmd ${50Up}
 bind j:ctrl;cmd ${50Down} 
 bind left:${3keys} ${50L}
 bind right:${3keys} ${50R}
-bind k:${3keys} ${Full}     
-bind j:${3keys} ${Center}  
+bind k:${3keys} ${Full}
+bind j:${3keys} ${Center}
 bind m:${3keys} ${Wide}
 bind n:${3keys} ${Narrow}
 
 # Throw Bindings
-bind i:${3keys}      throw ${dell} resize
-bind u:${3keys}      throw ${mac}  resize
-bind p:${3keys}     throw ${dell}
-bind o:${3keys}   throw ${mac}
+bind i:${3keys} throw ${dell} resize
+bind u:${3keys} throw ${mac} resize
+bind p:${3keys} throw ${dell}
+bind o:${3keys} throw ${mac}
 
 # Hints and Relaunch
 bind space:${3keys} hint
-bind r:${3keys}     relaunch
+bind r:${3keys} relaunch
