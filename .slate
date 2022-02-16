@@ -45,8 +45,8 @@ bind .:ctrl;cmd ${60Rma}
 bind ,:ctrl;cmd ${40Lma}
 bind m:ctrl;cmd ${75Rma}
 bind n:ctrl;cmd ${25Lma}
-bind h:${3keys} ${50Lam}
-bind l:${3keys} ${50Ram}
+bind h:ctrl;cmd ${50Lam}
+bind l:ctrl;cmd ${50Ram}
 bind k:ctrl;cmd ${50Up}
 bind j:ctrl;cmd ${50Down} 
 bind left:${3keys} ${50L}
