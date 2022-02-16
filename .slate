@@ -7,54 +7,73 @@ config resizePercentOf screenSize
 
 # Alias Settings
 alias 3keys shift;alt;cmd
+alias 2keys ctrl;cmd
+alias ma 9 #margin can be set to zero
 alias dell 1
 alias mac 0
-alias ma 9 #margin can be set to zero
-
+# Layouts
+# 0.3
 alias 66R push right bar-resize:screenSizeX/3*2
 alias 33L push left bar-resize:screenSizeX/3
 alias 66Rma move screenSizeX/3+${ma}*2;screenOriginY+${ma} screenSizeX/3*2-${ma}*3;screenSizeY-${ma}*2 1
 alias 33Lma move screenOriginX+${ma};screenOriginY+${ma} screenSizeX/3;screenSizeY-${ma}*2 1
-
+# 0.4
 alias 60R push right bar-resize:screenSizeX/5*3
-alias 40L push right bar-resize:screenSizeX/5*2
+alias 40L push left bar-resize:screenSizeX/5*2
 alias 60Rma move screenSizeX/5*2+${ma}*2;screenOriginY+${ma} screenSizeX/5*3-${ma}*2;screenSizeY-${ma}*2 1
 alias 40Lma move screenOriginX+${ma};screenOriginY+${ma} screenSizeX/5*2;screenSizeY-${ma}*2 1
-
+# 0.25
 alias 75R push right bar-resize:screenSizeX/4*3
 alias 25L push left bar-resize:screenSizeX/4*1
 alias 75Rma move screenSizeX/4+${ma}*2;screenOriginY+${ma} screenSizeX/4*3-${ma}*3;screenSizeY-${ma}*2 1
 alias 25Lma move screenOriginX+${ma};screenOriginY+${ma} screenSizeX/4;screenSizeY-${ma}*2 1
-
+# 0.5
 alias 50L push left bar-resize:screenSizeX/2
 alias 50R push right bar-resize:screenSizeX/2
 alias 50Ram move screenSizeX/2+${ma}*2;screenOriginY+${ma} screenSizeX/2-${ma}*2;screenSizeY-${ma}*2 1
 alias 50Lam move screenOriginX+${ma};screenOriginY+${ma} screenSizeX/2;screenSizeY-${ma}*2 1
-
+# Vertical
 alias 50Up push up bar-resize:screenSizeY/2
 alias 50Down push down bar-resize:screenSizeY/2
+# Single
 alias Full push up bar-resize:screenSizeX
 alias Center move screenOriginX+screenSizeX/8;screenOriginY+screenSizeY/6 3*screenSizeX/4;3*screenSizeY/4
 alias Wide move screenOriginX+screenSizeX/8;screenOriginY 3*screenSizeX/4;screenSizeY
 alias Narrow move screenOriginX+screenSizeX/4;screenOriginY 2*screenSizeX/4;screenSizeY
-#
+alias Widema move screenOriginX+screenSizeX/8;screenOriginY+${ma} 3*screenSizeX/4;screenSizeY-${ma}*2
+alias Narrowma move screenOriginX+screenSizeX/4;screenOriginY+${ma} 2*screenSizeX/4;screenSizeY-${ma}*2
+
 # Push Bindings
-bind right:ctrl;cmd ${66Rma}
-bind left:ctrl;cmd ${33Lma}
-bind .:ctrl;cmd ${60Rma} 
-bind ,:ctrl;cmd ${40Lma}
-bind m:ctrl;cmd ${75Rma}
-bind n:ctrl;cmd ${25Lma}
-bind h:ctrl;cmd ${50Lam}
-bind l:ctrl;cmd ${50Ram}
-bind k:ctrl;cmd ${50Up}
-bind j:ctrl;cmd ${50Down} 
+# 0.25
+bind ':${3keys} ${75R}
+bind ;:${3keys} ${25L}
+bind ':${2keys} ${75Rma}
+bind ;:${2keys} ${25Lma}
+# 0.3
+bind l:${3keys} ${66R}
+bind h:${3keys} ${33L}
+bind l:${2keys} ${66Rma}
+bind h:${2keys} ${33Lma}
+# 0.4
+bind .:${3keys} ${60R}
+bind ,:${3keys} ${40L}
+bind .:${2keys} ${60Rma} 
+bind ,:${2keys} ${40Lma}
+# 0.5
+bind left:${2keys} ${50Lam}
+bind right:${2keys} ${50Ram}
 bind left:${3keys} ${50L}
 bind right:${3keys} ${50R}
+# Vertical
+bind k:${2keys} ${50Up}
+bind j:${2keys} ${50Down} 
+# Single
 bind k:${3keys} ${Full}
 bind j:${3keys} ${Center}
 bind m:${3keys} ${Wide}
 bind n:${3keys} ${Narrow}
+bind m:${2keys} ${Widema}
+bind n:${2keys} ${Narrowma}
 
 # Throw Bindings
 bind i:${3keys} throw ${dell} resize
